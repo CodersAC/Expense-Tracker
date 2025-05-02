@@ -17,6 +17,8 @@ export const Transaction = () => {
     };
 
     addTransaction(newTransaction);
+    setTitle("");
+    setAmount("");
   };
 
   return (
@@ -29,6 +31,7 @@ export const Transaction = () => {
           placeholder="Enter Title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
+          required
         />
         <h5>Amount: ( - ) Expenses / ( + ) Income</h5>
         <input
@@ -36,6 +39,7 @@ export const Transaction = () => {
           placeholder="0"
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
+          required
         />
         <button className="btn" type="submit">
           Submit
